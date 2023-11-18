@@ -39,7 +39,7 @@ app.get("/players/", async (request, response) => {
   const getCricketQuery = `
 SELECT *
 FROM
-cricketTeam;`;
+cricket_team;`;
   const cricketArray = await db.all(getCricketQuery);
   response.send(
     cricketArray.map((eachPlayer) =>
